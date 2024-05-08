@@ -33,7 +33,7 @@ class _LoginPageState extends State<LoginPage> {
               style: TextStyleConstant.headerBlackTextStyle,
             ),
             const SizedBox(
-              height: 10,
+              height: 20,
             ),
             EditTextWidget(
               hintText: '',
