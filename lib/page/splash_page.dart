@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fruit_delivery/constant/constant.dart';
 
-import '../utils/size_utils.dart';
+import '../utils/utils.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});

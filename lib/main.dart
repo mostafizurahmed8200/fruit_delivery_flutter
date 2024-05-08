@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:fruit_delivery/page/login_page.dart';
 import 'package:fruit_delivery/page/ob_page.dart';
 import 'package:fruit_delivery/page/splash_page.dart';
 
@@ -27,6 +28,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/splash': (context) => const SplashPage(),
         '/OBPage': (context) => const OBPage(),
+        '/loginPage': (context) => const LoginPage(),
       },
       initialRoute: '/splash',
     );

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fruit_delivery/constant/constant.dart';
-import 'package:fruit_delivery/utils/size_utils.dart';
+import 'package:fruit_delivery/utils/utils.dart';
 import 'package:fruit_delivery/widget/button_widget.dart';
 
 class OBPage extends StatelessWidget {
@@ -45,10 +45,13 @@ class OBPage extends StatelessWidget {
                   height: 12,
                 ),
                 ButtonWidget(
-                    width: SizeUtils.sizeWidth(context) * .80,
-                    height: SizeUtils.sizeHeight(context) * .07,
-                    text: TextConstant.getStarted,
-                    onClickButton: () {}),
+                  width: SizeUtils.sizeWidth(context) * .80,
+                  height: SizeUtils.sizeHeight(context) * .07,
+                  text: TextConstant.getStarted,
+                  onClickButton: () {
+                    RouteUtils.route(context, '/loginPage');
+                  },
+                ),
               ],
             ),
           ),
