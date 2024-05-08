@@ -28,8 +28,6 @@ class _SplashPageState extends State<SplashPage> {
 
   @override
   Widget build(BuildContext context) {
-    // final size = MediaQuery.of(context).size;
-
     return Scaffold(
       backgroundColor: ColorConstant.splashColor,
       body: Column(

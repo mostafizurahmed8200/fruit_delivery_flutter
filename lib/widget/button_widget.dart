@@ -5,7 +5,7 @@ class ButtonWidget extends StatelessWidget {
   final double width;
   final double height;
   final String text;
-  final Function onClickButton;
+  final VoidCallback onClickButton;
 
   const ButtonWidget(
       {super.key,
@@ -16,8 +16,8 @@ class ButtonWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onClickButton(),
+    return InkWell(
+      onTap: onClickButton,
       child: Container(
         width: width,
         height: height,
