@@ -8,13 +8,13 @@ class EditTextWidget extends StatelessWidget {
   final bool isEnableSuggestion, isObscureText, isAutocorrect;
   final int? maxLength;
   final ValueChanged<String>? onChanged;
-  final TextEditingController? controller;
+
   final TextInputType? keywordType;
   final double width;
   final double? height;
 
   const EditTextWidget(
-      {Key? key,
+      {super.key,
       required this.hintText,
       this.prefixIcon,
       required this.isEnableSuggestion,
@@ -22,15 +22,13 @@ class EditTextWidget extends StatelessWidget {
       required this.isAutocorrect,
       this.maxLength,
       this.onChanged,
-      this.controller,
       this.keywordType,
       required this.width,
       this.height});
 
   @override
   Widget build(BuildContext context) {
-    final TextEditingController _controller =
-        controller ?? TextEditingController();
+    final TextEditingController controller = TextEditingController();
     return Container(
       height: 60,
       width: width,
@@ -73,7 +71,7 @@ class EditTextWidget extends StatelessWidget {
                   hintStyle: const TextStyle(color: Colors.grey),
                 ),
                 onChanged: onChanged,
-                controller: _controller,
+                controller: controller,
               ),
             ),
           ),

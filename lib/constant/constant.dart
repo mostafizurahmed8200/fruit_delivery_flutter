@@ -5,6 +5,8 @@ class ImageConstant {
   static const ic_appnamelogo = '${root_img}appname_logo.png';
   static const ic_obpic = '${root_img}ob_pic.png';
   static const bg_loginpage = '${root_img}login_pagebg.png';
+  static const ic_google = '${root_img}google.png';
+  static const ic_fb = '${root_img}facebooks.png';
 }
 
 class SVGConstant {
@@ -18,6 +20,8 @@ class TextConstant {
   static const String getGrosery = 'Ger your groceries in as fast as one hour';
   static const String getStarted = 'Get Started';
   static const String getGrosery_loginpage = 'Get your groceries\nwith nectar';
+  static const String continueWithGoogle = 'Continue with Google';
+  static const String continueWithFb = 'Continue with Facebook';
 }
 
 class TextStyleConstant {
@@ -42,10 +46,18 @@ class TextStyleConstant {
     fontSize: 15,
     color: ColorConstant.textNormalColor,
   );
+
+  static TextStyle normalGreyTextStyle = const TextStyle(
+    fontWeight: FontWeight.w500,
+    fontSize: 15,
+    color: Colors.grey,
+  );
 }
 
 class ColorConstant {
   static const Color splashColor = Color(0xff53b175);
+  static const Color googleBtnColor = Color(0xff5383EC);
+  static const Color fbBtnColor = Color(0xff4a66ac);
   static const Color indicatorColor = Color(0xff979797);
   static const Color textNormalColor = Color(0x5afcfcfc);
   static const Color appColor = Color(0xFF54408C);

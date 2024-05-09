@@ -35,3 +35,57 @@ class ButtonWidget extends StatelessWidget {
     );
   }
 }
+
+class LoginButtonWidget extends StatelessWidget {
+  final double width;
+  final double height;
+  final String text;
+  final VoidCallback onClickButton;
+  final String icon;
+  final Color color;
+
+  const LoginButtonWidget(
+      {super.key,
+      required this.width,
+      required this.height,
+      required this.text,
+      required this.onClickButton,
+      required this.icon,
+      required this.color});
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: onClickButton,
+      child: Container(
+        width: width,
+        height: height,
+        decoration: BoxDecoration(
+          color: color,
+          borderRadius: BorderRadius.circular(10),
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Image.asset(
+                icon,
+                color: Colors.white,
+                width: 30,
+                height: 30,
+              ),
+            ),
+            const SizedBox(
+              width: 20,
+            ),
+            Text(
+              text,
+              style: TextStyleConstant.buttonWhiteTextStyle,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}

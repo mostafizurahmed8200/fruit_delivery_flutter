@@ -21,38 +21,40 @@ class OBPage extends StatelessWidget {
         ),
         Align(
           alignment: Alignment.bottomCenter,
-          child: SizedBox(
-            width: SizeUtils.sizeWidth(context),
-            height: SizeUtils.sizeHeight(context) * .30,
-            child: Column(
-              children: [
-                SvgPicture.asset(SVGConstant.ic_logo),
-                const SizedBox(
-                  height: 20,
-                ),
-                Text(
-                  TextConstant.welcomeToStore,
-                  style: TextStyleConstant.headerWhiteTextStyle,
-                ),
-                const SizedBox(
-                  height: 12,
-                ),
-                Text(
-                  TextConstant.getGrosery,
-                  style: TextStyleConstant.normalWhiteTextStyle,
-                ),
-                const SizedBox(
-                  height: 12,
-                ),
-                ButtonWidget(
-                  width: SizeUtils.sizeWidth(context) * .80,
-                  height: SizeUtils.sizeHeight(context) * .07,
-                  text: TextConstant.getStarted,
-                  onClickButton: () {
-                    RouteUtils.route(context, '/loginPage');
-                  },
-                ),
-              ],
+          child: SingleChildScrollView(
+            child: SizedBox(
+              width: SizeUtils.sizeWidth(context),
+              height: SizeUtils.sizeHeight(context) * .30,
+              child: Column(
+                children: [
+                  SvgPicture.asset(SVGConstant.ic_logo),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  Text(
+                    TextConstant.welcomeToStore,
+                    style: TextStyleConstant.headerWhiteTextStyle,
+                  ),
+                  const SizedBox(
+                    height: 12,
+                  ),
+                  Text(
+                    TextConstant.getGrosery,
+                    style: TextStyleConstant.normalWhiteTextStyle,
+                  ),
+                  const SizedBox(
+                    height: 12,
+                  ),
+                  ButtonWidget(
+                    width: SizeUtils.sizeWidth(context) * .80,
+                    height: SizeUtils.sizeHeight(context) * .07,
+                    text: TextConstant.getStarted,
+                    onClickButton: () {
+                      RouteUtils.route(context, '/loginPage');
+                    },
+                  ),
+                ],
+              ),
             ),
           ),
         )
